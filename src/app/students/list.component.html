@@ -1,0 +1,33 @@
+﻿<h1>Students Information</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th style="width: 20%">Name</th>
+            <th style="width: 10%">Course</th>
+            <th style="width: 20%">Contry</th>
+            <th style="width: 20%">state</th>
+            <th style="width: 20%">City</th>
+            <th style="width: 10%">UserName</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let student of users">
+            <td>{{student.firstName}}</td>
+            <td>{{student.course}}</td>   
+            <td>{{student.country}}</td>  
+            <td>{{student.state}}</td>
+            <td>{{student.city}}</td>      
+             <td>{{student.username}}</td>
+            
+
+            
+            
+        </tr>
+        <tr *ngIf="!users">
+            <td colspan="4" class="text-center">
+                <span class="spinner-border spinner-border-lg align-center"></span>
+            </td>
+        </tr>
+    </tbody>
+</table>
